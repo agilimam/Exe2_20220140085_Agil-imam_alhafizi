@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="script.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Exercise.css">
+    <title>DOM Javascript</title>
+</head>
+<style>
+    body{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(4.jpg);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color: rgb(197, 249, 254);
+  font-family: 'Oswald', sans-serif;
+
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h3 {
+  font-family: 'Poetsen One', sans-serif;
+  font-size: 1.5em;
+  color: #010101;
+}
+
+/* Form element styles */
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #000000;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e82121;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: 'Oswald', sans-serif;
+}
+
+form input[type="radio"] {
+  margin-right: 5px;
+}
+
+form label[for="programing"],
+form label[for="desain"],
+form label[for="jaringan"],
+form label[for="data"] {
+  margin-right: 15px;
+}
+
+form p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #555;
+}
+</style>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" id="nav-work" class="nav-link active">BERANDA</a>
+        <div class="dropdown">
+            <a href="#" id="nav-work" class="nav-link">DESTINATION<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="Kerinci.html">KERINCI</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="nav-work" class="nav-link">AKTIVITAS<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="Budaya.html">BUDAYA</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="nav-work" class="nav-link">TENTANG KAMI<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="Profil.html">PROFIL</a>
+            </div>
+        </div>
+    </header><br>
+    <div class="container">
+        <div class="header">
+            <h3>Pengajuan Kunjungan</h3>
+        </div>
+        <form action="" onsubmit="Kirimdata(); return false;">
+            <label for="nama" style="font-weight: bold;">Nama</label><br>
+            <input type="text" placeholder="Nama anda" id="nama"><br><br>
+            <label for="nim" style="font-weight: bold;">NIM</label><br>
+            <input type="text" placeholder="NIM anda" id="nim"><br>
+            <p>Tampat yang ingin di kunjungi</p>
+
+            <input type="radio" name="tempat" id="danau" value="danau">
+            <label for="danau">Danau Kaco</label>
+            <input type="radio" name="tempat" id="gunung" value="gunung">
+            <label for="gunung">Gunung</label>
+            <input type="radio" name="tempat" id="air terjun" value="air terjun">
+            <label for="air terjun">Air Terjun</label>
+            <input type="radio" name="tempat" id="gunung tujuh" value="gunung tujuh">
+            <label for="gunung tujuh">Gunung Tujuh</label><br><br>
+            
+            <label for="Angkatan" style="font-weight:bold ;">Angkatan</label><br>
+            <select name="angkatan" id="angkatan" style="height: 50px;">
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>            
+            </select><br><br>
+
+            <label for="tanggal" style="font-weight: bold;">Jadwal Keberangkatan</label><br>
+            <input type="text" id="tanggal" style="height: 50px;"><br>
+
+            <label for="alamat" style="font-weight: bold;">alamat</label><br>
+            <textarea placeholder="Tulis alamatmu disini" name="alamat" id="alamat" cols="30" rows="5"></textarea><br><br>
+            <button type="submit">kirim</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>

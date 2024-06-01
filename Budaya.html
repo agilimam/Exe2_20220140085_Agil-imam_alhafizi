@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Border with Collapse</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Exercise.css">
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        .circle-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .circle-item {
+            text-align: center;
+            margin: 10px;
+        }
+        .img-circle {
+            border: 5px solid #fff; /* White border */
+            border-radius: 50%; /* Make the border circular */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
+            cursor: pointer;
+        }
+        .collapse-text {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            background-color: #2e2e2e;
+            color: white;
+            border: 2px solid #ffffff;
+            padding: 10px;
+            width: fit-content; /* Set width to fit content */
+            margin: 0 auto; /* Center the box horizontally */
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" id="nav-work" class="nav-link active">BERANDA</a>
+        <div class="dropdown">
+            <a href="#" id="nav-work" class="nav-link">DESTINATION<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="Kerinci.html">KERINCI</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="nav-work" class="nav-link">AKTIVITAS<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="Budaya.html">BUDAYA</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="nav-work" class="nav-link">TENTANG KAMI<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="Profil.html">PROFIL</a>
+            </div>
+        </div>
+    </header><br>
+    
+    <div class="circle-container">
+        <div class="circle-item">
+            <p class="text-center"><strong>PENCAK SILAT</strong></p><br>
+            <a href="#foto1" data-toggle="collapse">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSgEoQ0CNVZt30crbK3VlZo9I3A9m864IoSg&s" class="img-circle" alt="Pencak silat" width="200" height="200">
+            </a>
+            <div id="foto1" class="collapse collapse-text"><br>
+                <p>Pencak Silat adalah seni bela diri tradisional yang berasal dari Indonesia. Seni bela diri ini mengajarkan teknik bertarung yang efektif dan efisien, serta memiliki nilai-nilai filosofi yang mendalam.</p>
+            </div>
+        </div>
+        <div class="circle-item">
+            <p class="text-center"><strong>TARI SIKAPUR SIRIH</strong></p><br>
+            <a href="#foto2" data-toggle="collapse">
+                <img src="https://asset-2.tstatic.net/batam/foto/bank/images/tarian-sekapur-sirih-ditampilan-saat-dibukanya-musabaqoh-tilawatil-quran-mtq.jpg" class="img-circle" alt="Sikapur sirih" width="200" height="200">
+            </a>
+            <div id="foto2" class="collapse collapse-text">
+                <p>Tari Sekapur Jambi adalah salah satu provinsi yang berada di Sumatera dan kaya akan keberagaman budayanya. Salah satunya adalah kesenian tari tradisional seperti tari Sekapur Sirih dari Jambi. Tarian tradisional ini, memiliki keindahan yang khas pada setiap gerakannya.</p>
+            </div>
+        </div>
+        <div class="circle-item">
+            <p class="text-center"><strong>KENDURI SKO</strong></p><br>
+            <a href="#foto3" data-toggle="collapse">
+                <img src="https://pantauproyek.id/wp-content/uploads/2022/01/IMG-20220115-WA0001.jpg" class="img-circle" alt="kenduri sko" width="200" height="200">
+            </a>
+            <div id="foto3" class="collapse collapse-text">
+                <p>Kenduri Sko merupakan sebuah upacara kenduri adat yang telah diwariskan secara turun temurun serta masih terus dilaksanakan hingga saat ini dalam dalam kehidupan masyarakat, baik di Kota Sungai Penuh maupun di Kabupaten Kerinci. Dalam pelaksanaannya, Kenduri Sko dilakukan untuk dua hal acara pokok yaitu Kenduri Sko untuk tujuan menurunkan dan menyucikan benda-benda pusaka serta Kenduri Sko untuk pengukuhan kepada orang yang akan menyandang gelar adat/pemimpin adat/ninik mamak/depati..</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
